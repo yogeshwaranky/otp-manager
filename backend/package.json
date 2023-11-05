@@ -6,11 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    
-      "build": "npm i"
-    
-    
-    
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +20,7 @@
     "make-runnable": "^1.4.1",
     "mongoose": "^6.8.3",
     "nodemailer": "^6.9.0",
+    "render": "^0.1.4",
     "validator": "^13.7.0"
   }
 }
