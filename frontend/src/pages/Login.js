@@ -30,7 +30,8 @@ const Login = () => {
         setSpiner(false);
         navigate("/user/otp", { state: email });
       } else {
-        toast.error(response.data.error);
+        console.log(response)
+        toast.error(response.message);
       }
     }
   };
