@@ -12,7 +12,7 @@ const PORT = 4001
 const http = require("http");
 const socketIO = require("socket.io");
 const mongoose = require("mongoose");
-const { getDashboardData } = require("./controllers/usercontrollers");
+const { getDashboardData } = require("./controllers/usercontroller");
 
 // Create Express app
 
