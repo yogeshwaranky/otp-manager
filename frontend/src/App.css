@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+/* Add hover effect to the Fetch User Data button */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Style the table for better appearance */
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}

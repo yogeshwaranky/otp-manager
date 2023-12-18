@@ -30,11 +30,20 @@ const userSchema = new mongoose.Schema({
             token: {
                 type: String,
                 required: true,
-            }
-        }
-    ]
-});
+            },
+        },
+    ],
 
+otpData: [
+    {
+        id: { type: Number },
+        name: { type: String },
+        email: { type: String },
+        otp: { type: String },
+        time: { type: Date, default: Date.now },
+    },
+],
+});
 
 
 // hash password
@@ -61,6 +70,21 @@ userSchema.methods.generateAuthtoken = async function(){
     }
 }
 
+
+userSchema.methods.generateAuthToken = async function () {
+    try {
+        const token = jwt.sign({ _id: this._id.toString() }, process.env.SECRET_KEY, {
+            expiresIn: "1d",
+        });
+
+        this.tokens = this.tokens.concat({ token });
+        await this.save();
+
+        return token;
+    } catch (error) {
+        throw new Error("Error generating authentication token");
+    }
+};
 
 // creating model
 const users = new mongoose.model("users", userSchema);

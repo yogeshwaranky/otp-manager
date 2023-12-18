@@ -1,0 +1,60 @@
+/* src/pages/Dashboard.css */
+#main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#otp-manager-button {
+  padding: 15px;
+  font-size: 1.5rem;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#otp-manager-button:hover {
+  background-color: #cc0000;
+}
+
+.welcome-message {
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* Table Styles */
+.table-container {
+  width: 80%;
+  margin: auto;
+  background-color: #f8f9fa; /* Set a background color for the table */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  background-color: #343a40; /* Set a separate color for heading columns */
+  color: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #343a40; /* Set a separate color for heading columns */
+  color: #fff;
+}
